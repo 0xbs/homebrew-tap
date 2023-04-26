@@ -5,21 +5,21 @@
 class Secrets < Formula
   desc "A command line tool for symmetric encryption and decryption of files."
   homepage "https://github.com/0xbs/secrets"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.3/secrets_1.0.3_darwin_amd64.tar.gz"
-      sha256 "c19c83abad63a4670030c12f466f63b950cbd5bb81fb555568c821b83e44141b"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_darwin_amd64.tar.gz"
+      sha256 "a4f246bc6bab6af14fcd9f2345922257f87dec9e604c8c1ac01cb1fdf681262a"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.3/secrets_1.0.3_darwin_arm64.tar.gz"
-      sha256 "89cc7d47c6d78252e4d97b4fb0174435fe96264a2b3295746427e60a8642f92e"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_darwin_arm64.tar.gz"
+      sha256 "1ee9a94f364e18e63c51387cb3d81edf916ffbae533b64a8bc5065a5d2f5affc"
 
       def install
         bin.install "secrets"
@@ -28,17 +28,17 @@ class Secrets < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.3/secrets_1.0.3_linux_arm64.tar.gz"
-      sha256 "12179a9e5b8fd6e76cddb777cc2706e96dcd81f49b2286e5133c679c7a1aeb4d"
+    if Hardware::CPU.intel?
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_linux_amd64.tar.gz"
+      sha256 "c4d851902964f0bf10870a7e72be4207907dde060a56bc4d9b4569c55f1f7f72"
 
       def install
         bin.install "secrets"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.3/secrets_1.0.3_linux_amd64.tar.gz"
-      sha256 "3d2283fc26ebc16186a0ee953cc06dffd04060b77934ad0b9bf567dab5813ae5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_linux_arm64.tar.gz"
+      sha256 "a717dff3c543b2a28f1f986aa47ab6d104be807b39da5be5abe41237a07d3cef"
 
       def install
         bin.install "secrets"

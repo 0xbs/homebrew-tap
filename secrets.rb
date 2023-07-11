@@ -5,21 +5,21 @@
 class Secrets < Formula
   desc "A command line tool for symmetric encryption and decryption of files."
   homepage "https://github.com/0xbs/secrets"
-  version "1.0.4"
+  version "1.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_darwin_amd64.tar.gz"
-      sha256 "a4f246bc6bab6af14fcd9f2345922257f87dec9e604c8c1ac01cb1fdf681262a"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.5/secrets_1.0.5_darwin_amd64.tar.gz"
+      sha256 "077af8403799670093b46d5a3d9d05525cb189e90e7761569dd5be0c1c188b60"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_darwin_arm64.tar.gz"
-      sha256 "1ee9a94f364e18e63c51387cb3d81edf916ffbae533b64a8bc5065a5d2f5affc"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.5/secrets_1.0.5_darwin_arm64.tar.gz"
+      sha256 "abd1a0fd15f41a4b000650ab53662fb0b410e04a0bd0604b152f9261ff0cf2af"
 
       def install
         bin.install "secrets"
@@ -29,16 +29,16 @@ class Secrets < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_linux_amd64.tar.gz"
-      sha256 "c4d851902964f0bf10870a7e72be4207907dde060a56bc4d9b4569c55f1f7f72"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.5/secrets_1.0.5_linux_amd64.tar.gz"
+      sha256 "5aabed80d2a54667dc1f33e5063d74fe12e488a369bbc4810d61f5bd87638dbc"
 
       def install
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.4/secrets_1.0.4_linux_arm64.tar.gz"
-      sha256 "a717dff3c543b2a28f1f986aa47ab6d104be807b39da5be5abe41237a07d3cef"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.5/secrets_1.0.5_linux_arm64.tar.gz"
+      sha256 "bed47732cf871b03f2d105a5eb20f503ff51451cb09de14c9d118ff9bb34a689"
 
       def install
         bin.install "secrets"

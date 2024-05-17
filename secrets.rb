@@ -5,21 +5,21 @@
 class Secrets < Formula
   desc "A command line tool for symmetric encryption and decryption of files."
   homepage "https://github.com/0xbs/secrets"
-  version "1.0.6"
+  version "1.0.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.6/secrets_1.0.6_darwin_amd64.tar.gz"
-      sha256 "cce4fbbb3a35e99e6916c2501963b78a3c260cf3dbf6663b048d9c6d3ea58285"
+    on_intel do
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.7/secrets_1.0.7_darwin_amd64.tar.gz"
+      sha256 "fa88afa3952db3007708fb38ae325e1a741a48de8bc0a6eba72169d8a2db5e69"
 
       def install
         bin.install "secrets"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.6/secrets_1.0.6_darwin_arm64.tar.gz"
-      sha256 "b83a12273631cfe142f7db71445ca509d31004ecb8893c71a878a9d0a12686f1"
+    on_arm do
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.7/secrets_1.0.7_darwin_arm64.tar.gz"
+      sha256 "7df5c9ac5fd615d56e9e1f4518cd38c722d3ca97b7ceae67539f11050b264edc"
 
       def install
         bin.install "secrets"
@@ -28,20 +28,24 @@ class Secrets < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.6/secrets_1.0.6_linux_arm64.tar.gz"
-      sha256 "2e49005e7fbf534bae738929e0ff63d8e177cd179f8e6b45c87d7e02cc165e26"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/0xbs/secrets/releases/download/v1.0.7/secrets_1.0.7_linux_amd64.tar.gz"
+        sha256 "01095eeb3a5405bc0122fa832a3ef466e607277f33c213728ff657a79c4cf4eb"
 
-      def install
-        bin.install "secrets"
+        def install
+          bin.install "secrets"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.6/secrets_1.0.6_linux_amd64.tar.gz"
-      sha256 "df6ad1c500a5e88f56b2c2612f7fc3cfced04b1de019c429b24ebf70fa6eba7a"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/0xbs/secrets/releases/download/v1.0.7/secrets_1.0.7_linux_arm64.tar.gz"
+        sha256 "22222d01347456505f94dc779240eff7a837bd82b79fd394a88ce7800541db7f"
 
-      def install
-        bin.install "secrets"
+        def install
+          bin.install "secrets"
+        end
       end
     end
   end

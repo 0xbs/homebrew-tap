@@ -15,3 +15,4 @@ brew install <package>
 Package|Description
 ---|---
 [secrets](https://github.com/0xbs/secrets)|A command line tool for symmetric encryption and decryption of files.
+[graft](https://github.com/0xbs/graft)|A command line tool for merging and validating family tree JSON files.

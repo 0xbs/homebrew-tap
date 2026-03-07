@@ -5,23 +5,23 @@
 class Secrets < Formula
   desc "A command line tool for symmetric encryption and decryption of files."
   homepage "https://github.com/0xbs/secrets"
-  version "1.0.11"
+  version "1.0.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.11/secrets_1.0.11_darwin_amd64.tar.gz"
-      sha256 "b47b53c022c22c9211f7d603193e105cdddfd997b86c384adac20b389b95164f"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.13/secrets_1.0.13_darwin_amd64.tar.gz"
+      sha256 "2885f1dd6cc0d7293c9c6b176b7656592dfee254ad2a12b2f826401727c32bd4"
 
-      def install
+      define_method(:install) do
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.11/secrets_1.0.11_darwin_arm64.tar.gz"
-      sha256 "4427d4dc1c6821b0a28d8deabef1f50bc50377ba6d138a8a08e4dfd9b9a12461"
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.13/secrets_1.0.13_darwin_arm64.tar.gz"
+      sha256 "ea2e101e449d67e76ec411229241a5b4d737c3fbdd55ca95f564715f3993bd14"
 
-      def install
+      define_method(:install) do
         bin.install "secrets"
       end
     end
@@ -29,16 +29,16 @@ class Secrets < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.11/secrets_1.0.11_linux_amd64.tar.gz"
-      sha256 "e51518dd681433a4569e3c9ebac981a32443670fcef80e6df9287e56aa1f53d2"
-      def install
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.13/secrets_1.0.13_linux_amd64.tar.gz"
+      sha256 "7b0c5f3c906398d5e88d1214515a7c9656b5ee310d82f2e838f4ad6341fb3047"
+      define_method(:install) do
         bin.install "secrets"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/secrets/releases/download/v1.0.11/secrets_1.0.11_linux_arm64.tar.gz"
-      sha256 "fb7bfcf5393d53b82547910ef6ea3ee1b65e0240ebdb3e2c29e558698dd2eb7f"
-      def install
+      url "https://github.com/0xbs/secrets/releases/download/v1.0.13/secrets_1.0.13_linux_arm64.tar.gz"
+      sha256 "165d3dc530750d92d79c5d26d3902597d16b82680a128a2deee3f332593960e7"
+      define_method(:install) do
         bin.install "secrets"
       end
     end

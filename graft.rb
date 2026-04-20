@@ -5,21 +5,21 @@
 class Graft < Formula
   desc "A command line tool for merging and validating family tree JSON files."
   homepage "https://github.com/0xbs/graft"
-  version "1.0.1"
+  version "1.1.0"
   license "GPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0xbs/graft/releases/download/v1.0.1/graft_1.0.1_darwin_amd64.tar.gz"
-      sha256 "43db1a33d76e5565a18db9640207dc4ecd0bb4b3e480f0a3d5b01183bf78b8d4"
+      url "https://github.com/0xbs/graft/releases/download/v1.1.0/graft_1.1.0_darwin_amd64.tar.gz"
+      sha256 "f000c399f6b6cc6410a083bd7bdd7ed9bdac980f2ba6d262d03f1958545b543c"
 
       define_method(:install) do
         bin.install "graft"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0xbs/graft/releases/download/v1.0.1/graft_1.0.1_darwin_arm64.tar.gz"
-      sha256 "c2c84804f7778de0a9820c38815a1d6591687837129c4ed81e2c38950089acc9"
+      url "https://github.com/0xbs/graft/releases/download/v1.1.0/graft_1.1.0_darwin_arm64.tar.gz"
+      sha256 "a55f58b0ce76de513aeddea5d179c99487f508ec85c21ad8c543bfabba02b75d"
 
       define_method(:install) do
         bin.install "graft"
@@ -29,15 +29,15 @@ class Graft < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/graft/releases/download/v1.0.1/graft_1.0.1_linux_amd64.tar.gz"
-      sha256 "0369b8b13af5e8d4f59c8dc732f4d1f4539d39da6fc4c5fef6b841d0c569c0a3"
+      url "https://github.com/0xbs/graft/releases/download/v1.1.0/graft_1.1.0_linux_amd64.tar.gz"
+      sha256 "6b83857081dc45d37ca052761b5bfd395447c0fb5c5db666a59a20a57ad031c6"
       define_method(:install) do
         bin.install "graft"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0xbs/graft/releases/download/v1.0.1/graft_1.0.1_linux_arm64.tar.gz"
-      sha256 "6193b10f50be5350cedb803aadfab25bf3a55738222372cccdb9005fb06b57ab"
+      url "https://github.com/0xbs/graft/releases/download/v1.1.0/graft_1.1.0_linux_arm64.tar.gz"
+      sha256 "5c9b6b2390d263bd435bb9d698e0d9676c331dd623d150ed48552103bb699498"
       define_method(:install) do
         bin.install "graft"
       end
